@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ganesh Modak Catcher</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- *-------------------------------loding animation -->
+    <div id="loadingScreen">
+        <img src="loading_image.png" id="loadingImage" alt="Loading">
+        <div id="loadingBarContainer">
+            <div id="loadingBar"></div>
+        </div>
+        <p id="loadingPercentage">0%</p>
+        <h2>MADE BY MR.K</h2>
+    </div>
+    <!-- *-------------------------------game over -->
+    <div class="end">
+        <h1>GAME OVER</h1>
+    </div>
+    <!--*---------------------------------audio section -->
+    <audio id="myAudio">
+        <!-- <source src="horse.ogg" type="audio/ogg"> -->
+        <source src="modakCatch.mp3" type="audio/mpeg">
+      </audio>
+      <!--todo----bg music  -->
+      <div class="music-icon">
+        <img id="music-btn" src="Music.gif" alt="">
+    </div>
+    <audio id="audio-player" src="song1.mp3" loop autoplay></audio>
+    <!--* sfx like game over , cath modak , side move  -->
+    <audio id="sfx-player" src="modakCatch.mp3" ></audio>
+      <!--*---------------------------------------------main menu  -->
+      <div class="card">
+        <img src="menu_image.png" alt="Card Image" class="card-img">
+        <div class="play-btn">
+            <button id="Playbtn">
+                <span class="button_top">PLAY
+                </span>
+            </button>
+        </div>
+        <div class="social-icons">
+            <a href="https://www.youtube.com/@code_gully" target="_blank">
+                <img src="hticon.webp" alt="YouTube" class="icon">
+            </a>
+            <a href="https://discord.gg/xbeHBJRn6n" target="_blank">
+                <img src="disicon.webp" alt="Discord" class="icon">
+            </a>
+            <a href="https://www.instagram.com/mr.k_official_01?igsh=ZWQ2Y3N6NWU2NHB5" target="_blank">
+                <img src="instaicon.webp" alt="Instagram" class="icon">
+            </a>
+            <a href="https://github.com/codewithmrkay" target="_blank">
+                <img src="giticon.webp" alt="Instagram" class="icon">
+            </a>
+        </div>
+    </div>
+    <!-- *------------------------------------------------ level up message -->
+    <div class="level-up-message" id="level-up-message">
+        Level Up!
+    </div>
+    <!--*----------------------------------------- Game canvas (hidden initially) -->
+    <canvas id="gameCanvas" style="display:none;"></canvas>
+    
+    <script src="script.js"></script>
+</body>
+</html>

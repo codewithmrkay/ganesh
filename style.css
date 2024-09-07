@@ -1,0 +1,210 @@
+/* styles.css */
+@font-face {
+    font-family: 'mushak';
+    src: url('Mushak.woff') format('woff');
+}
+*{
+    font-family: 'mushak', sans-serif;
+}
+body, html {
+    font-family: mushak;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: sans-serif;
+    background-color: #0f1723;
+}
+#loadingScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+#loadingScreen h2{
+    letter-spacing: 5px;
+    font-weight: 400;
+}
+#loadingImage {
+    width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+#loadingBarContainer {
+    width: 80%;
+    height: 20px;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+#loadingBar {
+    width: 0;
+    height: 100%;
+    background-color: #4caf50;
+    border-radius: 10px;
+}
+
+#loadingPercentage {
+    font-size: 20px;
+    font-family: 'mushak';
+}
+
+canvas {
+    display: block;
+    background-color: #a4d4ae;
+    background: url('bg_level1.jpg');
+    background-size: cover;
+    transition: all .5s;
+}
+.end{
+    position: absolute;
+    color: red;
+    z-index: 9;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: none;
+}
+.end h1{
+    font-size: 20px;
+    background-color: black;
+    border-radius: 10px ;
+    padding: 5px 10px;
+    font-weight: 400;
+}
+/* todo-------------------------------------main menu */
+.card {
+    position: absolute;
+    z-index: 9;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    /* transform: scale(1.05); */
+}
+
+/* Image inside the card */
+.card-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Play button in the middle */
+.play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    padding: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+/* Social icons section */
+.social-icons {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: #000000;
+    border-top: 1px solid #ddd;
+}
+
+.social-icons a {
+    text-decoration: none;
+}
+
+.icon {
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.icon:hover {
+    transform: scale(1.2);
+}
+/* From Uiverse.io by Voxybuns */ 
+button {
+    /* Variables */
+    --button_radius: 0.75em;
+    --button_color: #e8e8e8;
+    --button_outline_color: #000000;
+    font-size: 25px;
+    font-weight: bold;
+    border: none;
+    border-radius: var(--button_radius);
+    background: var(--button_outline_color);
+  }
+  
+  .button_top {
+    display: block;
+    box-sizing: border-box;
+    border: 2px solid var(--button_outline_color);
+    border-radius: var(--button_radius);
+    padding: 0.3em 1.5em;
+    background: var(--button_color);
+    color: var(--button_outline_color);
+    transform: translateY(-0.2em);
+    transition: transform 0.1s ease;
+  }
+  
+  button:hover .button_top {
+    /* Pull the button upwards when hovered */
+    transform: translateY(-0.33em);
+  }
+  
+  button:active .button_top {
+    /* Push the button downwards when pressed */
+    transform: translateY(0);
+  }
+  /* todo--------------------------------------------back ground music icon */
+  img {
+    width: 60px;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.music-icon {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    z-index: 9;
+}
+
+.level-up-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 215, 0, 0.9);
+    color: black;
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease, transform 1s ease;
+}
+
+/* Animation for showing and moving up */
+.level-up-message.show {
+    opacity: 1;
+    transform: translate(-50%, -150%);
+}
